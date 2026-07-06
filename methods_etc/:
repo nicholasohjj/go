@@ -1,0 +1,15 @@
+package main
+
+type Reader struct {
+	b []byte	
+}
+
+func (r *Reader) Read() {
+	for {
+		r.b = append(r.b, 'A')
+	}
+}
+func main() {
+	r := Reader{make([]byte,8)}
+	&r.Read()
+}
